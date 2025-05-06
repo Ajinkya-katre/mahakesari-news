@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { StockMarketIndices } from '@/lib/constants'
 import { cn } from '@/lib/utils'
+import TradingViewWidget from './trading-view'
 
 interface MarketData {
   symbol: string
@@ -111,6 +112,7 @@ export default function MarketOverview() {
   }
   
   return (
+    <>
     <Card>
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
@@ -134,7 +136,7 @@ export default function MarketOverview() {
           </Button>
         </div>
       </CardHeader>
-      <CardContent>
+      {/* <CardContent>
         <div className="space-y-2">
           {marketData.map((index) => (
             <div 
@@ -175,7 +177,9 @@ export default function MarketOverview() {
             </div>
           ))}
         </div>
-      </CardContent>
+      </CardContent> */}
     </Card>
+      <TradingViewWidget />
+      </>
   )
 }
