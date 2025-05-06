@@ -34,7 +34,7 @@ export default function Home() {
         
         {/* Category Tabs */}
         <section className="mb-12">
-          <CategoryTabs />
+          {/* <CategoryTabs /> */}
           <div className="mt-6">
             <NewsGrid articles={latestArticles} />
           </div>
